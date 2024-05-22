@@ -1,0 +1,39 @@
+<%- include('header'); -%>
+
+    <main>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Rating</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% comments.forEach(function(comment) { %>
+                        <tr>
+                            <td>
+                                <%= comment.id %>
+                            </td>
+                            <td>
+                                <%= comment.name %>
+                            </td>
+                            <td>
+                                <%= comment.rating %>
+                            </td>
+                            <td>
+                                <%= comment.feedback %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+            <p>
+                <a href="/rating">Click here to return to the feedback form</a>
+            </p>
+        </div>
+    </main>
+
+    <%- include('footer'); -%>

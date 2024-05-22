@@ -1,0 +1,35 @@
+<%- include('header'); -%>
+
+    <main>
+        <div class="container">
+            <% if (errors !=="" ) { %>
+                <h3>
+                    <%= errors %>
+                </h3>
+                <p>There was a problem with the data you supplied in the form.</p>
+                <p><strong>Error form field:<span class="text-danger">
+                            <%= errortype %>
+                        </span> </strong> </p>
+                <% } else { %>
+                    <p>Thank you <strong>
+                            <%= name %>
+                        </strong> for your feedback </p>
+                    <p> You gave a score of<strong>
+                            <%= rating %>
+                        </strong> of 5.</p>
+                    <p> Feedback provided was:<strong>
+                            <%= feedback %>
+                        </strong></p>
+                    <hr>
+                    <p class="<%= messageClass %>">
+                        <%= message %>
+                    </p>
+                    <hr>
+                    <% } %>
+                        <p>
+                            <a href="/rating">Click here to return to the feedback form</a>
+                        </p>
+        </div>
+    </main>
+
+    <%- include('footer'); -%>

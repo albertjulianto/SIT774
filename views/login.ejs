@@ -1,0 +1,61 @@
+<%- include('header'); -%>
+
+    <main>
+        <div class="container">
+            <p>
+                Please complete the form below to login to our website.
+            </p>
+
+            <% if (typeof error_msg !=='undefined' && error_msg.length> 0) { %>
+                <div class="alert alert-danger">
+                    <%= error_msg %>
+                </div>
+                <% } %>
+
+                    <% if (typeof error !=='undefined' && error.length> 0) { %>
+                        <div class="alert alert-danger">
+                            <%= error %>
+                        </div>
+                        <% } %>
+
+                            <% if (typeof success_msg !=='undefined' && success_msg.length> 0) { %>
+                                <div class="alert alert-success" role="alert">
+                                    <%= success_msg %>
+                                </div>
+                                <% } %>
+
+
+                                    <div id="formContainer">
+                                        <form action="/login" method="post" id="postLoginForm">
+                                            <div class="row mb-2">
+                                                <label class="col-sm-2 col-form-label-sm text-sm-end"
+                                                    for="customer">Username:</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="customer"
+                                                        placeholder="Enter your username" name="username">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <label class="col-sm-2 col-form-label-sm text-sm-end"
+                                                    for="password">Password:</label>
+                                                <div class="col-sm-9">
+                                                    <input type="password" class="form-control" id="password"
+                                                        placeholder="Enter your password" name="password">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-sm mx-auto d-flex justify-content-center">
+                                                    <button type="submit" class="btn btn-primary">Log In</button>
+                                                </div>
+                                                <div class="col-sm mx-auto d-flex justify-content-center">
+                                                    <button type="reset" class="btn btn-primary">Reset</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+        </div>
+    </main>
+
+    <%- include('footer'); -%>

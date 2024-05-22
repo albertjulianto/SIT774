@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+    <main>
+        <div class="container">
+            <% if (errors !=="" ) { %>
+                <h3>
+                    <%= errors %>
+                </h3>
+                <p>There was a problem with the data you supplied in the signup form.</p>
+                <p><strong>Error form field:<span class="text-danger">
+                            <%= errortype %>
+                        </span> </strong> </p>
+                <% } else { %>
+                    <p>Thank you <strong>
+                            <%= username %>
+                        </strong> for sign up to our website !! 😀 </p>
+                    <hr>
+                    <% } %>
+                        <p>
+                            <a href="/signup">Click here to return to the signup form</a>
+                        </p>
+        </div>
+    </main>
+
+    <%- include('footer'); -%>

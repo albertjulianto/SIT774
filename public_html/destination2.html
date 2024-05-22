@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wonderlust Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid justify-content-center">
+            <a class="nav-link active" aria-current="page" href="home.html"><img src="Wonderlust Travel.png"
+                    class="img-fluid" alt="logo" width="175" height="175"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destination1.html">Australia</a></li>
+                            <li><a class="dropdown-item" href="destination2.html">Japan</a></li>
+                            <li><a class="dropdown-item" href="destination3.html">Iceland</a></li>
+                            <li><a class="dropdown-item" href="destination4.html">Switzerland</a></li>
+                            <li><a class="dropdown-item" href="destination5.html">Singapore</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="stories.html">Stories</a></li>
+                            <li><a class="dropdown-item" href="tips.html">Travel Tips</a></li>
+                            <li><a class="dropdown-item" href="news.html">News</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.html">Reservation</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Support
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="/rating">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="title" style="background-color: turquoise;">
+        <h3 class="col-sm-8 mx-auto text-center py-4 display-1">JAPAN</h3>
+    </div>
+
+    <main class="mx-5">
+        <section>
+            <div class="row bg-info-subtle p-4 mb-4 rounded container-fluid">
+                <div class="col-xl-6 col-12">
+                    <h3>JAPAN 10 DAYS TOUR</h3>
+                    <p class="lead">
+                        Embark on an 11-day journey through Japan's most iconic destinations, from the bustling streets
+                        of Tokyo to the historic temples of Kyoto. Discover the serenity of Hakone, the beauty of
+                        Kanazawa, and the cultural richness of Nara, Hiroshima, and Osaka on this unforgettable
+                        adventure.
+                    </p>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <input class="btn btn-primary btn-lg mb-3 mx-auto" type="button" id="btn-start"
+                            onclick="showTable2()" value="Show Itinerary">
+                    </div>
+                    <div id="japanItinerary"></div>
+                </div>
+
+                <div class="card col-xl-2 col-lg-4 col-12 mb-4 rounded" id="silverPackage"
+                    onmouseover="changeColorSilver()" onmouseout="resetColorSilver()">
+                    <img src="3stars.png" class="card-img-top img-fluid mt-3" alt="silver">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><strong>SILVER PACKAGE</strong></h5>
+                        <p class="card-text lead">What's Included:</p>
+                        <ul class="lead">
+                            <li>Complimentary Breakfast</li>
+                            <li>Comfortable 3 Star Hotels accommodation</li>
+                            <li>Portable Wifi Modem included</li>
+                            <li>Airport Transfers</li>
+                            <li>Entrance Fees to Major Attractions </li>
+                            <li>Guided City Tours</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column mt-auto">
+                        <h5 class="lead"> Starting From</h5>
+                        <p class="fs-1 text-danger">$3.299,99</p>
+                        <a href="reservation.html" class="card-link fs-3 text-black">BOOK NOW</a>
+                    </div>
+                </div>
+
+                <div class="card col-xl-2 col-lg-4 col-12 mb-4 rounded" id="goldPackage" onmouseover="changeColorGold()"
+                    onmouseout="resetColorGold()">
+                    <img src="4stars.png" class="card-img-top img-fluid mt-3" alt="gold">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><strong>GOLD PACKAGE</strong></h5>
+                        <p class="card-text lead">What's Included:</p>
+                        <ul class="lead">
+                            <li>Complimentary Breakfast, Lunch, Dinner</li>
+                            <li>Comfortable 4-5 Star Hotels accommodation</li>
+                            <li>Portable Wifi Modem included</li>
+                            <li>Airport Transfers</li>
+                            <li>Entrance Fees to Major Attractions </li>
+                            <li>Guided City Tours</li>
+                            <li>Free Photo Sessions</li>
+                            <li>Gift Voucher $200</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column mt-auto">
+                        <h5 class="lead"> Starting From</h5>
+                        <p class="fs-1 text-danger">$4.199,99</p>
+                        <a href="reservation.html" class="card-link fs-3 text-black">BOOK NOW</a>
+                    </div>
+                </div>
+
+                <div class="card col-xl-2 col-lg-4 col-12 mb-4 rounded" id="platinumPackage"
+                    onmouseover="changeColorPlatinum()" onmouseout="resetColorPlatinum()">
+                    <img src="5stars.png" class="card-img-top img-fluid mt-3" alt="platinum">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>PLATINUM PACKAGE</strong></h5>
+                        <p class="card-text lead">What's Included:</p>
+                        <ul class="lead">
+                            <li>Complimentary Breakfast, Lunch, Dinner</li>
+                            <li>Free Afternoon Cocktails</li>
+                            <li>Luxurious 5 Star Hotels accommodation</li>
+                            <li>Portable Wifi Modem included</li>
+                            <li>Airport Transfers</li>
+                            <li>Entrance Fees to Major Attractions </li>
+                            <li>Guided City Tours</li>
+                            <li>Free Photo Sessions</li>
+                            <li>Gift Voucher $500</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex flex-column  mt-auto">
+                        <h5 class="lead"> Starting From</h5>
+                        <p class="fs-1 text-danger">$5.299,99</p>
+                        <a href="reservation.html" class="card-link fs-3 text-black">BOOK NOW</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <br>
+    <footer class="container-fluid bg-dark text-white text-center p-2">
+        <p>Copyright &copy; 2024 Wonderlust Travel | wonderlustravel@gmail.com | Last update: <span
+                id="lastUpdate"></span> </p>
+    </footer>
+
+    <script>
+        function setLastUpdate() {
+            const footerText = document.getElementById('lastUpdate');
+            const dateTimeString = new Date()
+            footerText.textContent = dateTimeString;
+        }
+
+        window.onload = setLastUpdate;
+    </script>
+
+    <script>
+        function changeColorSilver() {
+            let gameStartDiv = document.getElementById("silverPackage");
+            gameStartDiv.style.backgroundColor = "lightgray";
+        }
+
+        function resetColorSilver() {
+            let gameStartDiv = document.getElementById("silverPackage");
+            gameStartDiv.style.backgroundColor = "";
+        }
+
+        function changeColorGold() {
+            let gameStartDiv = document.getElementById("goldPackage");
+            gameStartDiv.style.backgroundColor = "gold";
+        }
+
+        function resetColorGold() {
+            let gameStartDiv = document.getElementById("goldPackage");
+            gameStartDiv.style.backgroundColor = "";
+        }
+
+        function changeColorPlatinum() {
+            let gameStartDiv = document.getElementById("platinumPackage");
+            gameStartDiv.style.backgroundColor = "steelblue";
+        }
+
+        function resetColorPlatinum() {
+            let gameStartDiv = document.getElementById("platinumPackage");
+            gameStartDiv.style.backgroundColor = "";
+        }
+    </script>
+
+    <script>
+
+        function showTable2() {
+
+            const container = document.getElementById("japanItinerary");
+
+            // Check if the table already exists in the container
+            if (container.querySelector("table")) {
+                return;
+            }
+            // Create a new table element
+            const table = document.createElement("table");
+            table.className = "table table-bordered table-striped mt-4";
+
+            // Create the table header
+            const thead = document.createElement("thead");
+            const headerRow = document.createElement("tr");
+
+            // Add headers to the table
+            const headers = ["Day", "Location", "Activities"];
+            headers.forEach(function (headerText) {
+                const th = document.createElement("th");
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create the table body
+            const tbody = document.createElement("tbody");
+
+            // Itinerary data
+            const itineraryData = [
+                { day: 1, location: "Tokyo", activities: "Explore iconic sites like the Senso-ji Temple and the Tokyo Tower." },
+                { day: 2, location: "Tokyo", activities: "Experience the vibrant atmosphere of Shibuya and Harajuku, and visit the Meiji Shrine." },
+                { day: 3, location: "Tokyo to Hakone", activities: "Travel to Hakone, take a boat ride on Lake Ashi, and relax in an onsen (hot spring)." },
+                { day: 4, location: "Hakone to Kyoto", activities: "Travel to Kyoto and explore the historic temples such as Kinkaku-ji (Golden Pavilion) and Fushimi Inari Shrine." },
+                { day: 5, location: "Kyoto", activities: "Discover Kyoto's Gion district, visit Kiyomizu-dera Temple, and enjoy a traditional tea ceremony." },
+                { day: 6, location: "Kyoto to Nara", activities: "Take a day trip to Nara, visit Todai-ji Temple, and spend time with the friendly deer in Nara Park." },
+                { day: 7, location: "Kyoto to Hiroshima", activities: "Travel to Hiroshima, visit the Peace Memorial Park, and take a boat to Miyajima Island to see the Itsukushima Shrine." },
+                { day: 8, location: "Hiroshima to Osaka", activities: "Travel to Osaka and explore the bustling Dotonbori district, Osaka Castle, and taste local street food." },
+                { day: 9, location: "Osaka", activities: "Visit Universal Studios Japan or explore Osaka's shopping districts and markets." },
+                { day: 10, location: "Osaka to Kanazawa", activities: "Travel to Kanazawa and explore Kenroku-en Garden, Kanazawa Castle, and the historic Higashi Chaya district." },
+                { day: 11, location: "Kanazawa to Tokyo", activities: "Return to Tokyo for last-minute shopping and relaxation before departing." }
+            ];
+
+            // Add rows to the table body
+            itineraryData.forEach(function (item) {
+                const row = document.createElement("tr");
+                const dayCell = document.createElement("td");
+                const locationCell = document.createElement("td");
+                const activitiesCell = document.createElement("td");
+
+                dayCell.textContent = item.day;
+                locationCell.textContent = item.location;
+                activitiesCell.textContent = item.activities;
+
+                row.appendChild(dayCell);
+                row.appendChild(locationCell);
+                row.appendChild(activitiesCell);
+
+                tbody.appendChild(row);
+            });
+
+            // Append the table body to the table
+            table.appendChild(tbody);
+
+            // Append the table to the container div
+            container.appendChild(table);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

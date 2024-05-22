@@ -1,0 +1,78 @@
+<%- include('header'); -%>
+
+    <main>
+        <div class="container">
+            <p>
+                Please complete the form below to rate our service.
+            </p>
+
+            <div id="formContainer">
+
+                <form action="/comments" method="post" id="postFeedbackForm">
+                    <div class="row mb-2">
+                        <label class="col-sm-2 col-form-label-sm text-sm-end" for="customer">Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="customer" placeholder="Enter your name"
+                                name="name">
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-sm-2 col-form-label-sm text-sm-end">Rating:</label>
+                        <div class="col-sm-9 text-primary">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value=1>
+                                <label class="form-check-label" for="inlineRadio1">&#9733;</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio2" value=2>
+                                <label class="form-check-label" for="inlineRadio2">&#9733;&#9733;</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio3" value=3>
+                                <label class="form-check-label" for="inlineRadio3">&#9733;&#9733;&#9733;</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio4" value=4>
+                                <label class="form-check-label" for="inlineRadio4">&#9733;&#9733;&#9733;&#9733;</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio5" value=5>
+                                <label class="form-check-label"
+                                    for="inlineRadio5">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-sm-2 col-form-label-sm text-sm-end" for="feedback">Comments:</label>
+                        <div class="col-sm-9">
+                            <textarea rows="5" class="form-control" id="feedback" name="feedback"
+                                placeholder="Please type your comment/feedback here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm mx-auto d-flex justify-content-center ">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="col-sm mx-auto d-flex justify-content-center">
+                            <button type="reset" class="btn btn-primary">Reset</button>
+                        </div>
+                    </div>
+                </form>
+
+                <h5 class="mt-4">Rating List</h5>
+                <p>
+                    Click here to see our rating list from all customers.
+                </p>
+                <div class="d-grid gap-5d-md-flex justify-content-md-center mb-4">
+                    <a href="/feedback">
+                        <button class="btn btn btn-success" id="getfeedbackBtn">
+                            Rating list
+                        </button> </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <%- include('footer'); -%>
